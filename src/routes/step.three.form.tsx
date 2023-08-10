@@ -21,7 +21,7 @@ const StepThreeForm = () => {
         textAlign='center'
         component='h2'
         variant='h5'>
-        🦄 Step Three Files
+        📂 Step Three Files
       </Typography>
       <Form onSubmit={handleSubmit(onSubmit)}>
         <FileInput
