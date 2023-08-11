@@ -1,16 +1,13 @@
 import { styled } from '@mui/material/styles';
 import type { ComponentPropsWithoutRef, ReactNode } from 'react';
 
-interface IForm extends ComponentPropsWithoutRef<'form'> {
+interface FormProps extends ComponentPropsWithoutRef<'form'> {
   children: ReactNode;
 }
 
-const StyledForm = styled('form')(({ theme }) => ({
-  width: '100%',
-  marginTop: theme.spacing(2)
-}));
+const StyledForm = styled('form')(() => ({ width: '100%' }));
 
-const Form = ({ children, ...rest }: IForm) => {
+const Form = ({ children, ...rest }: FormProps) => {
   return (
     <StyledForm
       noValidate

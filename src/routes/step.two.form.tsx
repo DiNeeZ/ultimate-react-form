@@ -26,7 +26,7 @@ const StepTwoForm = () => {
     unregister,
     handleSubmit,
     watch,
-    formState: { errors }
+    formState: { errors, isValid }
   } = useForm<StepTwoFields>({
     mode: 'onBlur',
     resolver: zodResolver(StepTwoFieldsSchema)
@@ -93,7 +93,7 @@ const StepTwoForm = () => {
         </Box>
 
         {/* Submit and go to next step */}
-        <SubmitButton>Next</SubmitButton>
+        <SubmitButton isValid={isValid}>Next</SubmitButton>
       </Form>
     </>
   );

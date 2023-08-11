@@ -13,7 +13,7 @@ const StepOneForm = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors }
+    formState: { errors, isValid }
   } = useForm<StepOneFields>({
     mode: 'onBlur',
     resolver: zodResolver(StepOneFieldsSchema)
@@ -57,7 +57,7 @@ const StepOneForm = () => {
         </Box>
 
         {/* Submit and go to next step */}
-        <SubmitButton>Next</SubmitButton>
+        <SubmitButton isValid={isValid}>Next</SubmitButton>
       </Form>
     </>
   );
